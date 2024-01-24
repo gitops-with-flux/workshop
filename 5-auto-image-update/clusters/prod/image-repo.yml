@@ -1,0 +1,127 @@
+---
+apiVersion: image.toolkit.fluxcd.io/v1beta2
+kind: ImageRepository
+metadata:
+  name: podtato-head-entry
+  namespace: flux-system
+spec:
+  image: ghcr.io/podtato-head/entry
+  interval: 5m0s
+---
+apiVersion: image.toolkit.fluxcd.io/v1beta2
+kind: ImagePolicy
+metadata:
+  name: podtato-head-entry
+  namespace: flux-system
+spec:
+  imageRepositoryRef:
+    name: podtato-head-entry
+  policy:
+    semver:
+      range: 0.2.x
+---
+apiVersion: image.toolkit.fluxcd.io/v1beta2
+kind: ImageRepository
+metadata:
+  name: podtato-head-hat
+  namespace: flux-system
+spec:
+  image: ghcr.io/podtato-head/hat
+  interval: 5m0s
+---
+apiVersion: image.toolkit.fluxcd.io/v1beta2
+kind: ImagePolicy
+metadata:
+  name: podtato-head-hat
+  namespace: flux-system
+spec:
+  imageRepositoryRef:
+    name: podtato-head-hat
+  policy:
+    semver:
+      range: 0.2.x
+---
+apiVersion: image.toolkit.fluxcd.io/v1beta2
+kind: ImageRepository
+metadata:
+  name: podtato-head-left-arm
+  namespace: flux-system
+spec:
+  image: ghcr.io/podtato-head/left-arm
+  interval: 5m0s
+---
+apiVersion: image.toolkit.fluxcd.io/v1beta2
+kind: ImagePolicy
+metadata:
+  name: podtato-head-left-arm
+  namespace: flux-system
+spec:
+  imageRepositoryRef:
+    name: podtato-head-left-arm
+  policy:
+    semver:
+      range: 0.2.x
+---
+apiVersion: image.toolkit.fluxcd.io/v1beta2
+kind: ImageRepository
+metadata:
+  name: podtato-head-right-arm
+  namespace: flux-system
+spec:
+  image: ghcr.io/podtato-head/right-arm
+  interval: 5m0s
+---
+apiVersion: image.toolkit.fluxcd.io/v1beta2
+kind: ImagePolicy
+metadata:
+  name: podtato-head-right-arm
+  namespace: flux-system
+spec:
+  imageRepositoryRef:
+    name: podtato-head-right-arm
+  policy:
+    semver:
+      range: 0.2.x
+---
+apiVersion: image.toolkit.fluxcd.io/v1beta2
+kind: ImageRepository
+metadata:
+  name: podtato-head-left-leg
+  namespace: flux-system
+spec:
+  image: ghcr.io/podtato-head/left-leg
+  interval: 5m0s
+---
+apiVersion: image.toolkit.fluxcd.io/v1beta2
+kind: ImagePolicy
+metadata:
+  name: podtato-head-left-leg
+  namespace: flux-system
+spec:
+  imageRepositoryRef:
+    name: podtato-head-left-leg
+  policy:
+    semver:
+      range: 0.2.x
+---
+apiVersion: image.toolkit.fluxcd.io/v1beta2
+kind: ImageRepository
+metadata:
+  name: podtato-head-right-leg
+  namespace: flux-system
+spec:
+  image: ghcr.io/podtato-head/right-leg
+  interval: 5m0s
+---
+apiVersion: image.toolkit.fluxcd.io/v1beta2
+kind: ImagePolicy
+metadata:
+  name: podtato-head-right-leg
+  namespace: flux-system
+spec:
+  imageRepositoryRef:
+    name: podtato-head-right-leg
+  policy:
+    semver:
+      range: 0.2.x
+---
